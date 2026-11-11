@@ -76,6 +76,6 @@ public String viewHistory(@PathVariable String accountNumber, Model model) {
     model.addAttribute("transactions", transactions);
     
     return "history";
-
+// Completed the final tasks
 }
 }
