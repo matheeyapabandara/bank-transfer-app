@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Account History</title>
+</head>
+<body>
+    <h1>Account History</h1>
+    <a th:href="@{/}">Back to Dashboard</a>
+    <hr>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Date</th>
+                <th>From Account</th>
+                <th>To Account</th>
+                <th>Amount</th>
+                <th>Status</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr th:each="tx : ${transactions}">
+                <td th:text="${tx.id}"></td>
+                <td th:text="${tx.createdAt}"></td>
+                <td th:text="${tx.fromAccount}"></td>
+                <td th:text="${tx.toAccount}"></td>
+                <td th:text="${tx.amount}"></td>
+                <td th:text="${tx.status}"></td>
+                <td th:text="${tx.description}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
